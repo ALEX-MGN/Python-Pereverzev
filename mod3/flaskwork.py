@@ -4,10 +4,10 @@ import os
 
 app = Flask(__name__)
 
-weekday = datetime.today().weekday()
 weekdays = ["Хорошего понедельника!","Хорошего вторника!","Хорошей среды!","Хорошего четверга!","Хорошей пятницы!","Хорошей субботы!","Хорошего воскресенья!"]
 @app.route("/hello-world/<username>")
 def hello_world(username):
+    weekday = datetime.today().weekday()
     return f'Привет, {username}. {weekdays[weekday]}'
 
 @app.route("/max_number/<path:numbers>")
