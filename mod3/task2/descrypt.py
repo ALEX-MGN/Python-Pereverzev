@@ -13,4 +13,4 @@ def descrypt(string):
     return new_string + (string[-1] if string[-1] != "." else "")
 
 if __name__ == "__main__":
-    print(descrypt("абра-кадабра."))
+    print(sys.stdin.read())
