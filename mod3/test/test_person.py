@@ -1,5 +1,5 @@
 import unittest
-from mod3 import person
+from mod3.task4 import person
 
 class TestPerson(unittest.TestCase):
     def setUp(self):

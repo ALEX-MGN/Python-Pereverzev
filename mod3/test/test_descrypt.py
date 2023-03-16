@@ -1,5 +1,5 @@
 import unittest
-from mod3.descrypt import descrypt
+from mod3.task2.descrypt import descrypt
 
 array_words = ["абра-кадабра.", "абраа..-кадабра", "абраа..-.кадабра", "абраа..-.кадабра","абрау...-кадабра"]
 array_empyty = ["абра........", ".", "1......................."]

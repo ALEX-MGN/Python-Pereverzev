@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/Desktop/Python-Pereverzev/mod5/tests/test_redirect.py", line 13, in test_stdout
+    raise Exception('Hello stderr.txt')
+Exception: Hello stderr.txt

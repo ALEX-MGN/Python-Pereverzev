@@ -1,5 +1,5 @@
 import unittest
-from mod4.flask_wtform import app
+from mod4.task1and2.flask_wtform import app
 
 class TestFlaskWtform(unittest.TestCase):
     def setUp(self):
