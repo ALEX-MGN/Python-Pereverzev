@@ -1,0 +1,21 @@
+{"time":"18:08:02", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:08:02", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:08:27", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:08:27", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:08:29", "level":"ERROR", "message":"We are unable to divide by zero!\""}
+Traceback (most recent call last):
+  File "/home/user/Desktop/Python-Pereverzev/venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/user/Desktop/Python-Pereverzev/venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/user/Desktop/Python-Pereverzev/mod6/task3.py", line 23, in divide
+    return f"a / b = {a / b:.2f}"
+ZeroDivisionError: division by zero
+{"time":"18:28:03", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:30:29", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:30:38", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:31:17", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:31:26", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:31:35", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:31:45", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
+{"time":"18:32:02", "level":"INFO", "message":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435"}
