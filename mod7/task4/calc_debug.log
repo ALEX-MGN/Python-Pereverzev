@@ -1,0 +1,4 @@
+DEBUG | logger.logger_calculate | 2023-03-31 19:13:20,719 | 21 | Entered worker(213,123)
+DEBUG | logger.logger_calculate | 2023-03-31 19:13:20,719 | 24 | Calculation result of worker(213, 123) = 26199
+DEBUG | logger.logger_calculate | 2023-03-31 19:18:31,626 | 13 | Entered worker(12,321)
+DEBUG | logger.logger_calculate | 2023-03-31 19:18:31,626 | 16 | Calculation result of worker(12, 321) = 333

@@ -1,0 +1,5 @@
+
+DEBUG | logger_calculate | 23:23:14 | 19 | Entered worker(231,4213)
+DEBUG | logger_calculate | 23:23:14 | 22 | Calculation result of worker(231, 4213) = 973203
+DEBUG | logger_calculate | 23:26:19 | 19 | Entered worker(213,42)
+DEBUG | logger_calculate | 23:26:19 | 22 | Calculation result of worker(213, 42) = 8946
