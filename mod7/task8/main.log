@@ -1,0 +1,9 @@
+ERROR | logger.skillbox | 2023-04-07 20:59:56,258 | 29 | Некорректное действие
+DEBUG | logger.logger_calculate | 2023-04-07 21:01:35,641 | 10 | Entered worker(213123,421)
+DEBUG | logger.logger_calculate | 2023-04-07 21:01:35,664 | 13 | Calculation result of worker(213123, 421) = 213544
+DEBUG | logger.logger_calculate | 2023-04-07 21:03:20,927 | 10 | Entered worker(231,123421)
+DEBUG | logger.logger_calculate | 2023-04-07 21:03:20,951 | 13 | Calculation result of worker(231, 123421) = 123652
+ERROR | logger.skillbox | 2023-04-07 21:04:22,989 | 24 | Некорректное действие
+DEBUG | logger.logger_calculate | 2023-04-07 21:04:28,192 | 10 | Entered worker(31231,312)
+DEBUG | logger.logger_calculate | 2023-04-07 21:04:28,212 | 13 | Calculation result of worker(31231, 312) = 31543
+ERROR | logger.skillbox | 2023-04-07 21:19:05,787 | 24 | Некорректное действие

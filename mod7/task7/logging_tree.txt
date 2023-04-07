@@ -1,0 +1,12 @@
+<--""
+   Level WARNING
+   |
+   o<--"logger"
+       Level INFO
+       Handler TimedRotatingFile '/home/user/Desktop/Python-Pereverzev/mod7/task7/utils.log' when='S' interval=10 backupCount=1
+         Level INFO
+         Filter <logging_config.ASCIIFilter object at 0x7fab9a2b09d0>
+         Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
+       |
+       o<--"logger.logger_calculate"
+           Level DEBUG
