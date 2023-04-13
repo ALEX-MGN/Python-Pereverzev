@@ -1,0 +1,4 @@
+Ссылка на docker.hub:
+https://hub.docker.com/repository/docker/alexper13/test_app/general
+Сайт:
+http://51.250.0.129:5050/hello/alex
