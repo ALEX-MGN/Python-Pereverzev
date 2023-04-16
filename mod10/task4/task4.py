@@ -23,5 +23,5 @@ if __name__ == "__main__":
         T = cursor.fetchall()[0][0]
         cursor.execute(f"SELECT SUM(salary) - {T} FROM salaries")
         K = cursor.fetchall()[0][0]
-        result = round(T / K, 2) * 100
+        result = round(T / K * 100, 2)
         print(f"Число социального неравенства: F = {result}%")
