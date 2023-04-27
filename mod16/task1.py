@@ -1,8 +1,10 @@
 import sqlite3
 
-#mov_id - связь one to many
-#act_id - связь one to one
-#dir_id - связь one to one
+#movie_cast - actors (act_id) многие к одному
+#movie_cast - movie (mov_id) многие к одному
+#oscar_awarded - movie (mov_id) многие к одному
+#movie_direction - movie (mov_id) один к одному
+#movie_direction - director (dir_id) многие к одному
 
 def create_table():
     with sqlite3.connect("movies") as conn:
