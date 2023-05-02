@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="hw.db">
+<dataSource name="homework.sqlite">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.48">
     <root id="1">
       <ServerVersion>3.40.1</ServerVersion>
@@ -1423,124 +1423,150 @@
     <argument id="503" parent="172">
       <Position>1</Position>
     </argument>
-    <table id="504" parent="173" name="customer"/>
-    <table id="505" parent="173" name="manager"/>
-    <table id="506" parent="173" name="order"/>
-    <table id="507" parent="173" name="sqlite_master">
+    <table id="504" parent="173" name="assignments"/>
+    <table id="505" parent="173" name="assignments_grades"/>
+    <table id="506" parent="173" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="508" parent="173" name="sqlite_sequence">
-      <System>1</System>
-    </table>
-    <column id="509" parent="504" name="customer_id">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>integer|0s</DasType>
+    <table id="507" parent="173" name="students"/>
+    <table id="508" parent="173" name="students_groups"/>
+    <table id="509" parent="173" name="teachers"/>
+    <column id="510" parent="504" name="assisgnment_id">
+      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="510" parent="504" name="full_name">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="511" parent="504" name="teacher_id">
       <Position>2</Position>
     </column>
-    <column id="511" parent="504" name="city">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="512" parent="504" name="manager_id">
-      <DasType>integer|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <foreign-key id="513" parent="504">
-      <ColNames>manager_id</ColNames>
-      <RefColNames>manager_id</RefColNames>
-      <RefTableName>manager</RefTableName>
-    </foreign-key>
-    <key id="514" parent="504">
-      <ColNames>customer_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="515" parent="505" name="manager_id">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>integer|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="516" parent="505" name="full_name">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="517" parent="505" name="city">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <key id="518" parent="505">
-      <ColNames>manager_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="519" parent="506" name="order_no">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>integer|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="520" parent="506" name="purchase_amount">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="521" parent="506" name="date">
+    <column id="512" parent="504" name="due_date">
       <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="522" parent="506" name="customer_id">
-      <DasType>integer|0s</DasType>
+    <column id="513" parent="504" name="group_id">
+      <DasType>INTEGER|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="523" parent="506" name="manager_id">
-      <DasType>integer|0s</DasType>
+    <column id="514" parent="504" name="assignment_text">
+      <DasType>VARCHAR(100)|0s</DasType>
       <Position>5</Position>
     </column>
-    <foreign-key id="524" parent="506">
-      <ColNames>customer_id</ColNames>
-      <RefColNames>customer_id</RefColNames>
-      <RefTableName>customer</RefTableName>
+    <foreign-key id="515" parent="504">
+      <ColNames>teacher_id</ColNames>
+      <RefColNames>teacher_id</RefColNames>
+      <RefTableName>teachers</RefTableName>
     </foreign-key>
-    <foreign-key id="525" parent="506">
-      <ColNames>manager_id</ColNames>
-      <RefColNames>manager_id</RefColNames>
-      <RefTableName>manager</RefTableName>
+    <foreign-key id="516" parent="504">
+      <ColNames>group_id</ColNames>
+      <RefColNames>group_id</RefColNames>
+      <RefTableName>students_groups</RefTableName>
     </foreign-key>
-    <key id="526" parent="506">
-      <ColNames>order_no</ColNames>
+    <key id="517" parent="504">
+      <ColNames>assisgnment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="527" parent="507" name="type">
+    <column id="518" parent="505" name="grade_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="519" parent="505" name="assisgnment_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="520" parent="505" name="student_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="521" parent="505" name="grade">
+      <DasType>INTEGER|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="522" parent="505" name="date">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="523" parent="505">
+      <ColNames>assisgnment_id</ColNames>
+      <RefColNames>assisgnment_id</RefColNames>
+      <RefTableName>assignments</RefTableName>
+    </foreign-key>
+    <foreign-key id="524" parent="505">
+      <ColNames>student_id</ColNames>
+      <RefColNames>student_id</RefColNames>
+      <RefTableName>students</RefTableName>
+    </foreign-key>
+    <key id="525" parent="505">
+      <ColNames>grade_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="526" parent="506" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="528" parent="507" name="name">
+    <column id="527" parent="506" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="529" parent="507" name="tbl_name">
+    <column id="528" parent="506" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="530" parent="507" name="rootpage">
+    <column id="529" parent="506" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="531" parent="507" name="sql">
+    <column id="530" parent="506" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="532" parent="508" name="name">
+    <column id="531" parent="507" name="student_id">
+      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="533" parent="508" name="seq">
+    <column id="532" parent="507" name="full_name">
+      <DasType>VARCHAR(20)|0s</DasType>
       <Position>2</Position>
     </column>
+    <column id="533" parent="507" name="group_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="534" parent="507">
+      <ColNames>group_id</ColNames>
+      <RefColNames>group_id</RefColNames>
+      <RefTableName>students_groups</RefTableName>
+    </foreign-key>
+    <key id="535" parent="507">
+      <ColNames>student_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="536" parent="508" name="group_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="537" parent="508" name="teacher_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="538" parent="508">
+      <ColNames>teacher_id</ColNames>
+      <RefColNames>teacher_id</RefColNames>
+      <RefTableName>teachers</RefTableName>
+    </foreign-key>
+    <key id="539" parent="508">
+      <ColNames>group_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="540" parent="509" name="teacher_id">
+      <DasType>integer|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="541" parent="509" name="full_name">
+      <DasType>VARCHAR(20)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <key id="542" parent="509">
+      <ColNames>teacher_id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
