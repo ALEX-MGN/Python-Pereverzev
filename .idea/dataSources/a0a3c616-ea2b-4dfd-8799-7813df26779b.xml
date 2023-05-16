@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="homework.sqlite">
+<dataSource name="python.db">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.48">
     <root id="1">
       <ServerVersion>3.40.1</ServerVersion>
@@ -1423,150 +1423,41 @@
     <argument id="503" parent="172">
       <Position>1</Position>
     </argument>
-    <table id="504" parent="173" name="assignments"/>
-    <table id="505" parent="173" name="assignments_grades"/>
-    <table id="506" parent="173" name="sqlite_master">
+    <table id="504" parent="173" name="person"/>
+    <table id="505" parent="173" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="507" parent="173" name="students"/>
-    <table id="508" parent="173" name="students_groups"/>
-    <table id="509" parent="173" name="teachers"/>
-    <column id="510" parent="504" name="assisgnment_id">
-      <DasType>INTEGER|0s</DasType>
+    <column id="506" parent="504" name="name">
+      <DasType>VARCHAR(50)|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="511" parent="504" name="teacher_id">
+    <column id="507" parent="504" name="age">
+      <DasType>VARCHAR(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="512" parent="504" name="due_date">
-      <DasType>varchar(255)|0s</DasType>
+    <column id="508" parent="504" name="sex">
+      <DasType>VARCHAR(50)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="513" parent="504" name="group_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="514" parent="504" name="assignment_text">
-      <DasType>VARCHAR(100)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <foreign-key id="515" parent="504">
-      <ColNames>teacher_id</ColNames>
-      <RefColNames>teacher_id</RefColNames>
-      <RefTableName>teachers</RefTableName>
-    </foreign-key>
-    <foreign-key id="516" parent="504">
-      <ColNames>group_id</ColNames>
-      <RefColNames>group_id</RefColNames>
-      <RefTableName>students_groups</RefTableName>
-    </foreign-key>
-    <key id="517" parent="504">
-      <ColNames>assisgnment_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="518" parent="505" name="grade_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="519" parent="505" name="assisgnment_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="520" parent="505" name="student_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="521" parent="505" name="grade">
-      <DasType>INTEGER|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="522" parent="505" name="date">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <foreign-key id="523" parent="505">
-      <ColNames>assisgnment_id</ColNames>
-      <RefColNames>assisgnment_id</RefColNames>
-      <RefTableName>assignments</RefTableName>
-    </foreign-key>
-    <foreign-key id="524" parent="505">
-      <ColNames>student_id</ColNames>
-      <RefColNames>student_id</RefColNames>
-      <RefTableName>students</RefTableName>
-    </foreign-key>
-    <key id="525" parent="505">
-      <ColNames>grade_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="526" parent="506" name="type">
+    <column id="509" parent="505" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="527" parent="506" name="name">
+    <column id="510" parent="505" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="528" parent="506" name="tbl_name">
+    <column id="511" parent="505" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="529" parent="506" name="rootpage">
+    <column id="512" parent="505" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="530" parent="506" name="sql">
+    <column id="513" parent="505" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="531" parent="507" name="student_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="532" parent="507" name="full_name">
-      <DasType>VARCHAR(20)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="533" parent="507" name="group_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <foreign-key id="534" parent="507">
-      <ColNames>group_id</ColNames>
-      <RefColNames>group_id</RefColNames>
-      <RefTableName>students_groups</RefTableName>
-    </foreign-key>
-    <key id="535" parent="507">
-      <ColNames>student_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="536" parent="508" name="group_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="537" parent="508" name="teacher_id">
-      <DasType>INTEGER|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="538" parent="508">
-      <ColNames>teacher_id</ColNames>
-      <RefColNames>teacher_id</RefColNames>
-      <RefTableName>teachers</RefTableName>
-    </foreign-key>
-    <key id="539" parent="508">
-      <ColNames>group_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="540" parent="509" name="teacher_id">
-      <DasType>integer|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="541" parent="509" name="full_name">
-      <DasType>VARCHAR(20)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <key id="542" parent="509">
-      <ColNames>teacher_id</ColNames>
-      <Primary>1</Primary>
-    </key>
   </database-model>
 </dataSource>
